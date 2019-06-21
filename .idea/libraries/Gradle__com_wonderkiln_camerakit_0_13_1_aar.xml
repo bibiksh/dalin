@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.wonderkiln:camerakit:0.13.1@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0acf8343dd30ba74d0771971ad2c9015/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0acf8343dd30ba74d0771971ad2c9015/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0acf8343dd30ba74d0771971ad2c9015/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

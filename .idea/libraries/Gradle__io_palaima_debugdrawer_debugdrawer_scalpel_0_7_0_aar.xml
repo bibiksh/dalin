@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: io.palaima.debugdrawer:debugdrawer-scalpel:0.7.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0a49caf38c23982d3beb8043950b2fd9/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0a49caf38c23982d3beb8043950b2fd9/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.palaima.debugdrawer/debugdrawer-scalpel/0.7.0/d31fa6e0025e24d285d77e6325370f14a5eab774/debugdrawer-scalpel-0.7.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

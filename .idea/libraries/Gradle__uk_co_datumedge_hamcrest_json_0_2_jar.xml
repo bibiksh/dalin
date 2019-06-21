@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: uk.co.datumedge:hamcrest-json:0.2@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/uk.co.datumedge/hamcrest-json/0.2/4bc7b706b01f42d90492ad5d2d7a4122734f4fc2/hamcrest-json-0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/uk.co.datumedge/hamcrest-json/0.2/b04fc3604eac3ef91d431a6957d0daeb17719927/hamcrest-json-0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
