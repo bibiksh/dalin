@@ -139,8 +139,13 @@ dependencies {
      // AutoML model
     implementation 'com.google.firebase:firebase-ml-vision-automl:16.0.0'
 
+
     implementation 'com.google.firebase:firebase-core:16.0.9'
     implementation 'com.google.firebase:firebase-crash:16.2.1'
+
+    // Real Database
+    //implementation 'com.google.firebase:firebase-database:18.0.0'
+
 
 
     //org old  https://github.com/the-dagger/MLKitAndroid

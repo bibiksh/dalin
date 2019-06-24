@@ -25,7 +25,7 @@ import com.seanlab.dalin.mlkit.ghost.view.fragments.GhostV0ErrorFragment;
 import com.seanlab.dalin.mlkit.ghost.view.fragments.LoginUrlFragment;
 import com.seanlab.dalin.mlkit.ghost.view.fragments.PasswordAuthFragment;
 
-
+import com.seanlab.dalin.mlkit.ghost.view.BaseActivity;
 
 public class LoginActivity extends BaseActivity implements
         CredentialSource,

@@ -5,6 +5,7 @@
     <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
         <item name="android:colorPrimary">@color/white</item>
         <item name="android:colorPrimaryDark">@color/black</item>
+        <item name="android:windowBackground">@color/background</item>
     </style>
 
     <!-- google -->
@@ -283,8 +284,23 @@
         <item name="colorError">@color/login_error</item>
     </style>
 
-    <style name="CardListActivityTheme" parent="AppTheme">
+    <style name="CardListActivityTheme" parent="AppTheme3">
         <item name="android:windowBackground">@color/card_list_background</item>
     </style>
+    <style name="AppTheme4" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- main -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowBackground">@color/background</item>
 
+        <!-- toolbar -->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionBarSize">@dimen/toolbar_height</item>
+
+        <!-- widgets -->
+        <item name="android:checkboxStyle">@style/MyCheckBox</item>
+    </style>
 </resources>

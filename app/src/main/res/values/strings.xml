@@ -38,6 +38,8 @@
     <string name="mode_odt_live_face_subtitle">인공지능 얼굴인식을 해보세요.</string>
     <string name="mode_odt_live_myimage_title">나의 재활용</string>
     <string name="mode_odt_live_myimage_subtitle">재활용 뽐내기.</string>
+    <string name="mode_odt_live_mypoint_title">나의 포인트</string>
+    <string name="mode_odt_live_mypoint_subtitle">나의 포인트를 알아보세요.</string>
     <string name="mode_odt_static_title">Object Detection: Static Image</string>
     <string name="mode_odt_static_subtitle">One or more objects can be detected from a provided image.</string>
     <string name="mode_barcode_live_title">Barcode Scanning</string>
@@ -108,6 +110,8 @@
     <!--  google -->
     <!--  web -->
     <string name="url">http://34.66.128.95</string>
+    <string name="title_point">나의 포인트</string>
+    <string name="point_value">100  점 </string>
 
 
     <!--  Ghost -->

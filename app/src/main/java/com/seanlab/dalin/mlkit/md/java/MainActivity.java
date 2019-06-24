@@ -19,11 +19,13 @@ package com.seanlab.dalin.mlkit.md.java;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -34,6 +36,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.seanlab.dalin.mlkit.R;
 import com.seanlab.dalin.mlkit.md.java.WebHomeActivity;
+import com.seanlab.dalin.mlkit.md.java.PointActivity;
 
 import com.seanlab.dalin.mlkit.ghost.view.LoginActivity;
 
@@ -44,10 +47,11 @@ public class MainActivity extends AppCompatActivity {
 
 
   private enum DetectionMode {
-    ODT_LIVE_BARCODE(R.drawable.barcode_scanning,R.string.mode_odt_live_barcode_title, R.string.mode_odt_live_barcode_subtitle),
-    ODT_LIVE_IMAGE_LABEL(R.drawable.image_labelling,R.string.mode_odt_live_image_label_title, R.string.mode_odt_live_image_label_subtitle),
-    ODT_LIVE_HOME(R.drawable.landmark_identification,R.string.mode_odt_live_home_title, R.string.mode_odt_live_home_subtitle),
-    ODT_LIVE_MYIMG(R.drawable.face_detection,R.string.mode_odt_live_myimage_title, R.string.mode_odt_live_myimage_subtitle);
+    ODT_LIVE_BARCODE(R.drawable.barcode_scanning2,R.string.mode_odt_live_barcode_title, R.string.mode_odt_live_barcode_subtitle),
+    ODT_LIVE_IMAGE_LABEL(R.drawable.image_labelling2,R.string.mode_odt_live_image_label_title, R.string.mode_odt_live_image_label_subtitle),
+    ODT_LIVE_MYIMG(R.drawable.mypic,R.string.mode_odt_live_myimage_title, R.string.mode_odt_live_myimage_subtitle),
+    ODT_LIVE_MYPOINT(R.drawable.mypoint,R.string.mode_odt_live_mypoint_title, R.string.mode_odt_live_mypoint_subtitle),
+    ODT_LIVE_HOME(R.drawable.home,R.string.mode_odt_live_home_title, R.string.mode_odt_live_home_subtitle);
    // ODT_LIVE_IMAGE(R.drawable.image_labelling,R.string.mode_odt_live_image_title, R.string.mode_odt_live_image_subtitle),
    // ODT_LIVE_TEXT(R.drawable.text_recognition,R.string.mode_odt_live_text_title, R.string.mode_odt_live_text_subtitle),
    // ODT_LIVE_LANDMARK(R.drawable.landmark_identification,R.string.mode_odt_live_landmark_title, R.string.mode_odt_live_landmark_subtitle);
@@ -92,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
       Utils.requestRuntimePermissions(this);
     }
   }
+
 
   @Override
   protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -166,7 +171,9 @@ public class MainActivity extends AppCompatActivity {
                 case ODT_LIVE_MYIMG:
                   activity.startActivity(new Intent(activity, com.seanlab.dalin.mlkit.ghost.view.LoginActivity.class));
                   break;
-
+                case ODT_LIVE_MYPOINT:
+                  activity.startActivity(new Intent(activity, com.seanlab.dalin.mlkit.md.java.PointActivity.class));
+                  break;
                   /*
                 //case ODT_LIVE_IMAGE:
                 //  activity.startActivity(new Intent(activity, com.seanlab.dalin.mlkit.md.java.LiveObjectCloudImageDetectionActivity.class));

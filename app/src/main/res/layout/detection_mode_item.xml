@@ -30,6 +30,17 @@
       android:textColor="@color/home_page_mode_item_subtitle"
       android:textSize="@dimen/home_page_mode_item_subtitle_size"/>
 
+  <TextView
+      android:id="@+id/point_value"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="@dimen/home_page_mode_item_title_padding_top"
+      android:paddingBottom="@dimen/home_page_mode_item_title_padding_bottom"
+      android:fontFamily="google-sans-medium"
+      android:textColor="@color/white"
+      android:textSize="@dimen/home_page_mode_item_title_size"/>
+
+
   <View
       android:layout_width="match_parent"
       android:layout_height="@dimen/divider_height"

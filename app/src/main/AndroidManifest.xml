@@ -153,6 +153,13 @@
             android:exported="false"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".md.java.PointActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+        </activity>
+
+
         <!--  -->
         <activity
             android:name=".md.java.StaticObjectDetectionActivity"
@@ -229,7 +236,9 @@
         <activity
             android:name=".ghost.view.PostViewActivity"
             android:parentActivityName=".ghost.view.PostListActivity"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme4">
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ghost.view.PostListActivity"/>
@@ -239,7 +248,8 @@
             android:name=".ghost.view.PostConflictResolutionActivity"
             android:parentActivityName=".ghost.view.PostListActivity"
             android:windowSoftInputMode="adjustResize"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ghost.view.PostListActivity"/>
@@ -248,7 +258,8 @@
         <activity
             android:name=".ghost.view.AboutActivity"
             android:parentActivityName=".ghost.view.PostListActivity"
-            android:theme="@style/CardListActivityTheme">
+            android:theme="@style/AppTheme4"
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ghost.view.PostListActivity"/>
@@ -256,7 +267,9 @@
 
         <activity
             android:name=".ghost.view.OpenSourceLibsActivity"
-            android:parentActivityName=".ghost.view.AboutActivity">
+            android:parentActivityName=".ghost.view.AboutActivity"
+            
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ghost.view.AboutActivity"/>
