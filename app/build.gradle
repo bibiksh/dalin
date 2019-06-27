@@ -144,7 +144,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-crash:16.2.1'
 
     // Real Database
-    //implementation 'com.google.firebase:firebase-database:18.0.0'
+    implementation 'com.google.firebase:firebase-database:18.0.0'
 
 
 

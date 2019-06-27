@@ -43,7 +43,7 @@
             android:includeFontPadding="false"
             android:textAppearance="@style/TextAppearance.Large"
             android:textColor="@color/text_primary_inverted_dim"
-            android:text="https://"
+            android:text="http://"
             tools:ignore="HardcodedText"
             />
 

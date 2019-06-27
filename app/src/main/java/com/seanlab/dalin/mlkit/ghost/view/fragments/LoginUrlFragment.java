@@ -71,7 +71,7 @@ public class LoginUrlFragment extends BaseFragment implements
         AppUtils.setHtmlWithLinkClickHandler(mLoginHelpTipView, loginHelpTip, (url) -> {
             if ("ghost-help".equals(url)) {
                 //sean
-                //AppUtils.openUri(LoginUrlFragment.this, "https://www.ghostforbeginners.com/beginners/");
+                AppUtils.openUri(LoginUrlFragment.this, "https://www.ghostforbeginners.com/beginners/");
 
             } else {
                 Log.wtf("Unexpected URL = %s", url);

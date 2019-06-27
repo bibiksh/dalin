@@ -48,6 +48,7 @@ import com.google.firebase.ml.vision.common.FirebaseVisionImage;
 import com.google.firebase.ml.vision.label.FirebaseVisionCloudImageLabelerOptions;
 import com.google.firebase.ml.vision.label.FirebaseVisionImageLabel;
 import com.google.firebase.ml.vision.label.FirebaseVisionImageLabeler;
+import com.google.firebase.ml.vision.text.FirebaseVisionTextRecognizer;
 import com.seanlab.dalin.mlkit.R;
 import com.seanlab.dalin.mlkit.md.common.GraphicOverlayLabel;
 import com.seanlab.dalin.mlkit.md.common.VisionImageProcessor;
@@ -106,7 +107,7 @@ public class LiveObjectCloudTextDetectionActivity extends AppCompatActivity impl
   private Bitmap searchbitmap;
   private VisionImageProcessor imageProcessor;
 
-  private  FirebaseVisionImageLabeler detector;
+  private FirebaseVisionTextRecognizer detector;
 
 
 
@@ -148,10 +149,10 @@ public class LiveObjectCloudTextDetectionActivity extends AppCompatActivity impl
     if (graphicImageOverlay == null) {
       Log.d(TAG, "graphicOverlay is null");
     }
-    FirebaseVisionCloudImageLabelerOptions.Builder optionsBuilder =
-            new FirebaseVisionCloudImageLabelerOptions.Builder();
+    //FirebaseVisionCloudImageLabelerOptions.Builder optionsBuilder =
+    //        new FirebaseVisionCloudImageLabelerOptions.Builder();
 
-    detector = FirebaseVision.getInstance().getCloudImageLabeler(optionsBuilder.build());
+    //detector = FirebaseVision.getInstance().getCloudImageLabeler(optionsBuilder.build());
 
 
 
@@ -385,63 +386,7 @@ public class LiveObjectCloudTextDetectionActivity extends AppCompatActivity impl
 
   }
 
-  public void getFromCloud() {
-    DetectedObject object = workflowModel.getConfirmedObject();
-    Log.e(TAG, "SEAN:FirebaseVisionImage===>start");
-    //searchbitmap=searchedObject.getObjectThumbnail();
-    if (object != null) {
-      searchbitmap = object.getBitmap();
 
-     FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(searchbitmap);
-      detector.processImage(image)
-      .addOnSuccessListener(new OnSuccessListener<List<FirebaseVisionImageLabel>>() {
-        @Override
-        public void onSuccess(List<FirebaseVisionImageLabel> firebaseVisionImageLabels) {
-          //
-          Log.e(TAG, "SEAN:FirebaseVisionImage===>onSuccess");
-          Log.d(TAG, "cloud label size: " + firebaseVisionImageLabels.size());
-          List<String> labelsStr = new ArrayList<>();
-          List<Product> productList = new ArrayList<>();
-          for (int i = 0; i < firebaseVisionImageLabels.size(); ++i) {
-            FirebaseVisionImageLabel label = firebaseVisionImageLabels.get(i);
-            Log.d(TAG, "cloud label: " + label);
-            if (label.getText() != null) {
-              labelsStr.add((label.getText()));
-              String labels=label.getText();
-              Float confidence=label.getConfidence();
-              productList.add(
-                      new Product( "", labels + i, confidence.toString() + i));
-
-            }
-          }
-
-
-          bottomSheetTitleView.setText(
-                  getResources()
-                          .getQuantityString(
-                                  R.plurals.bottom_sheet_title, labelsStr.size(), labelsStr.size()));
-
-          productRecyclerView.setAdapter(new ProductAdapter(productList));
-          Log.d(TAG, "searched : " + productList.size());
-
-          ///
-        }
-      })
-      .addOnFailureListener(new OnFailureListener() {
-        @Override
-        public void onFailure(@NonNull Exception e) {
-          //
-          Log.e(TAG, "SEAN:FirebaseVisionImage===>onFailure");
-          //
-        }
-      })
-      ;
-      //imageProcessor = new CloudImageLabelingProcessor();
-      //imageProcessor.process(searchbitmap, graphicImageOverlay);
-    }
-    Log.e(TAG, "SEAN:FirebaseVisionImage===>end" );
-
-  }
   private void stateChangeInAutoSearchMode(WorkflowState workflowState) {
     boolean wasPromptChipGone = (promptChip.getVisibility() == View.GONE);
 

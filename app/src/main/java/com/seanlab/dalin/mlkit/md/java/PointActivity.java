@@ -22,6 +22,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -38,53 +40,38 @@ import com.seanlab.dalin.mlkit.R;
 import com.seanlab.dalin.mlkit.ghost.view.LoginActivity;
 
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+
 /** Entry activity to select the detection mode. */
 public class PointActivity extends AppCompatActivity {
 
-  //sean
-  //private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
- // private DatabaseReference databaseReference = firebaseDatabase.getReference();
 
-  private enum DetectionModePoint {
+  private  TextView titleView;
+  private ImageView pointimage;
+  private  TextView point;
+  private ImageButton PointPlusButton;
+  private ImageButton PointMinusButton;
 
-    ODT_LIVE_MYPOINT(R.drawable.mypoint,R.string.mode_odt_live_mypoint_title, R.string.mode_odt_live_mypoint_subtitle,R.string.title_point);
-   // ODT_LIVE_IMAGE(R.drawable.image_labelling,R.string.mode_odt_live_image_title, R.string.mode_odt_live_image_subtitle),
-   // ODT_LIVE_TEXT(R.drawable.text_recognition,R.string.mode_odt_live_text_title, R.string.mode_odt_live_text_subtitle),
-   // ODT_LIVE_LANDMARK(R.drawable.landmark_identification,R.string.mode_odt_live_landmark_title, R.string.mode_odt_live_landmark_subtitle);
-    //ODT_LIVE_FACE(R.drawable.face_detection,R.string.mode_odt_live_face_title, R.string.mode_odt_live_face_subtitle);
-    /*
-    ODT_LIVE(R.string.mode_odt_live_image_title, R.string.mode_odt_live_image_subtitle),
-    ODT_STATIC(R.string.mode_odt_static_title, R.string.mode_odt_static_subtitle),
-    BARCODE_LIVE(R.string.mode_barcode_live_title, R.string.mode_barcode_live_subtitle);
-    */
-    //sean
-    private final int imageResId;
+  private Integer PointValue;
 
-    private final int titleResId;
-    private final int subtitleResId;
-
-    private final int subpointResId;
-
-    DetectionModePoint(int imageResId,int titleResId, int subtitleResId,int subpointResId) {
-      this.imageResId=imageResId;
-      this.titleResId = titleResId;
-      this.subtitleResId = subtitleResId;
-      this.subpointResId = subpointResId;
-    }
-  }
+  DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
+  DatabaseReference conditionRef = mRootRef.child("text");
 
   @Override
   protected void onCreate(@Nullable Bundle bundle) {
     super.onCreate(bundle);
 
+
+
     AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
     setContentView(R.layout.activity_main_point);
 
-    RecyclerView modeRecyclerView = findViewById(R.id.mode_recycler_view);
-    modeRecyclerView.setHasFixedSize(true);
-    modeRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-    modeRecyclerView.setAdapter(new ModeItemAdapter(DetectionModePoint.values()));
-
+    addListenerOnButton();
 
   }
 
@@ -96,118 +83,71 @@ public class PointActivity extends AppCompatActivity {
     }
   }
 
+  public void addListenerOnButton() {
 
-  @Override
-  protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-    if (requestCode == Utils.REQUEST_CODE_PHOTO_LIBRARY
-        && resultCode == Activity.RESULT_OK
-        && data != null) {
-      Intent intent = new Intent(this, StaticObjectDetectionActivity.class);
-      intent.setData(data.getData());
-      startActivity(intent);
-    } else {
-      super.onActivityResult(requestCode, resultCode, data);
-    }
-  }
+    //
+    titleView =(TextView)findViewById(R.id.title1);
+    pointimage=(ImageView)findViewById(R.id.imageView1);
+    point =(TextView)findViewById(R.id.point);
 
-  private class ModeItemAdapter extends RecyclerView.Adapter<ModeItemAdapter.ModeItemViewHolder> {
 
-    private final DetectionModePoint[] detectionModes;
+    PointPlusButton = (ImageButton) findViewById(R.id.btnPointplus);
+    PointMinusButton = (ImageButton) findViewById(R.id.btnPointminus);
 
-    ModeItemAdapter(DetectionModePoint[] detectionModes) {
-      this.detectionModes = detectionModes;
-    }
+    pointimage.setImageResource(R.drawable.mypoint);
+    point.setText("100");
 
-    @NonNull
-    @Override
-    public ModeItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-      return new ModeItemViewHolder(
-          LayoutInflater.from(parent.getContext())
-              .inflate(R.layout.detection_mode_item, parent, false));
-    }
 
-    @Override
-    public void onBindViewHolder(@NonNull ModeItemViewHolder modeItemViewHolder, int position) {
-      modeItemViewHolder.bindDetectionMode(detectionModes[position]);
-    }
-
-    @Override
-    public int getItemCount() {
-      return detectionModes.length;
-    }
-
-    private class ModeItemViewHolder extends RecyclerView.ViewHolder {
-
-      private final ImageView imgView;
-      private final TextView titleView;
-      private final TextView subtitleView;
-      private final TextView subpointView;
-
-      ModeItemViewHolder(@NonNull View view) {
-        super(view);
-        imgView=view.findViewById(R.id.iViewApi);
-        titleView = view.findViewById(R.id.mode_title);
-        subtitleView = view.findViewById(R.id.mode_subtitle);
-        subpointView=view.findViewById(R.id.point_value);
+    conditionRef.addValueEventListener(new ValueEventListener() {
+      @Override
+      public void onDataChange(DataSnapshot dataSnapshot) {
+        String text = dataSnapshot.getValue(String.class);
+        if (text==null)
+        {
+          PointValue =100;
+        } else
+          {
+          PointValue = Integer.parseInt(text);
+        }
+        point.setText(text);
       }
 
-      void bindDetectionMode(DetectionModePoint detectionMode) {
+      @Override
+      public void onCancelled(DatabaseError databaseError) {
 
-        imgView.setImageResource(detectionMode.imageResId);
-        titleView.setText(detectionMode.titleResId);
-        subtitleView.setText(detectionMode.subpointResId);
-
-        subpointView.setText(R.string.point_value);
-
-
-        itemView.setOnClickListener(
-            view -> {
-              Activity activity = PointActivity.this;
-              switch (detectionMode) {
-                /*
-                case ODT_LIVE_BARCODE:
-                  activity.startActivity(new Intent(activity, LiveBarcodeScanningActivity.class));
-                  break;
-                case ODT_LIVE_IMAGE_LABEL:
-                  activity.startActivity(new Intent(activity, LiveObjectCloudDetectionActivity.class));
-                  break;
-                case ODT_LIVE_HOME:
-                  activity.startActivity(new Intent(activity, WebHomeActivity.class));
-                  break;
-                case ODT_LIVE_MYIMG:
-                  activity.startActivity(new Intent(activity, LoginActivity.class));
-                  break;
-                  */
-                  /*
-                //case ODT_LIVE_IMAGE:
-                //  activity.startActivity(new Intent(activity, com.seanlab.dalin.mlkit.md.java.LiveObjectCloudImageDetectionActivity.class));
-                //  break;
-                case ODT_LIVE_TEXT:
-                  //Utils.openImagePicker(activity);
-                  activity.startActivity(new Intent(activity, com.seanlab.dalin.mlkit.md.java.LiveObjectCloudTextDetectionActivity.class));
-                  break;
-
-                case ODT_LIVE_LANDMARK:
-                  activity.startActivity(new Intent(activity, com.seanlab.dalin.mlkit.md.java.LiveObjectCloudLandDetectionActivity.class));
-                  break;
-                //case ODT_LIVE_FACE:
-                //  activity.startActivity(new Intent(activity, com.seanlab.dalin.mlkit.md.java.LiveObjectDetectionActivity.class));
-                 // break;
-                 */
-                /*
-                case ODT_LIVE:
-                  activity.startActivity(new Intent(activity, com.seanlab.dalin.mlkit.md.java.LiveObjectDetectionActivity.class));
-                  break;
-                case ODT_STATIC:
-                  Utils.openImagePicker(activity);
-                  break;
-                case BARCODE_LIVE:
-                  activity.startActivity(new Intent(activity, com.seanlab.dalin.mlkit.md.java.LiveBarcodeScanningActivity.class));
-                  break;
-                  */
-              }
-            });
       }
-    }
+    });
+
+
+
+    PointPlusButton.setOnClickListener(new Button.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        // TODO : click event
+        PointValue=PointValue+100;
+        String text=Integer.toString(PointValue);
+        //point.setText("200");
+        int add=Integer.parseInt(text);
+
+        conditionRef.setValue(text);
+
+
+      }
+    });
+    PointMinusButton.setOnClickListener(new Button.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        // TODO : click event
+          PointValue=PointValue-100;
+          String text=Integer.toString(PointValue);
+        //String text="-100";
+        //point.setText("200");
+        conditionRef.setValue(text);
+
+      }
+    });
   }
+
+
+
 }

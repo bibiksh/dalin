@@ -237,7 +237,7 @@
             android:name=".ghost.view.PostViewActivity"
             android:parentActivityName=".ghost.view.PostListActivity"
             android:windowSoftInputMode="adjustResize"
-            android:theme="@style/AppTheme4">
+            android:theme="@style/AppTheme4"
             >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
