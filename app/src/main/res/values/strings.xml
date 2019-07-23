@@ -109,9 +109,11 @@
 
     <!--  google -->
     <!--  web -->
-    <string name="url">http://34.66.128.95</string>
+    <string name="url">http://34.67.19.15</string>
     <string name="title_point">나의 포인트</string>
     <string name="point_value">100  점 </string>
+    <string name="title_pointplus"> +100 포인트</string>
+    <string name="title_pointminus"> -100 포인트</string>
 
 
     <!--  Ghost -->

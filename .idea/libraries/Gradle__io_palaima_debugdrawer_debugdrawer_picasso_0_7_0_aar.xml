@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: io.palaima.debugdrawer:debugdrawer-picasso:0.7.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0207f9d24ad3b142ada32daeaf0a9b1a/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0207f9d24ad3b142ada32daeaf0a9b1a/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7c49b37accae35b0bfdddf541afd9ffc/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7c49b37accae35b0bfdddf541afd9ffc/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

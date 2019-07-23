@@ -55,7 +55,9 @@ public class PointActivity extends AppCompatActivity {
   private ImageView pointimage;
   private  TextView point;
   private ImageButton PointPlusButton;
+  private  TextView pointplus;
   private ImageButton PointMinusButton;
+  private  TextView pointminus;
 
   private Integer PointValue;
 
@@ -92,7 +94,9 @@ public class PointActivity extends AppCompatActivity {
 
 
     PointPlusButton = (ImageButton) findViewById(R.id.btnPointplus);
+    pointplus =(TextView)findViewById(R.id.point);
     PointMinusButton = (ImageButton) findViewById(R.id.btnPointminus);
+    pointminus =(TextView)findViewById(R.id.point);
 
     pointimage.setImageResource(R.drawable.mypoint);
     point.setText("100");
