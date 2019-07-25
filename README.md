@@ -1,4 +1,4 @@
-# 파이어 베이스 머신러닝
+# KSH 파이어 베이스 머신러닝
 A collection of real life apps built using [Firebase ML Kit](https://firebase.google.com/products/ml-kit/) APIs.
 
 # 셋업 순서
