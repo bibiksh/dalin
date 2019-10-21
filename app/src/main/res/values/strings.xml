@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">달인</string>
+    <string name="app_name">분리수거의 달인</string>
     <string name="app_web_name">달인웹</string>
     <string name="detected_items">찾는것</string>
     <string name="desc_text">간단히 카드 유효기간을 확인해보세요.</string>
@@ -17,6 +17,16 @@
     <string name="longitude">경도</string>
     <string name="accuracy">정확도</string>
     <string name="title_face">얼굴 인식</string>
+
+    <string name="item1">물품인식</string>
+    <string name="item1_1">QR/바코드 인식</string>
+    <string name="item1_2">사물인식</string>
+    <string name="item2">달인인증</string>
+    <string name="item3">내 포인트</string>
+    <string name="item4">재활용의 모든것</string>
+    <string name="item7">예약 내용</string>
+    <string name="item8">예약 하기</string>
+
     <!--  google -->
     <string name="entry_java_title">Java</string>
     <string name="entry_java_subtitle">Run the MLKit Showcase written in Java.</string>
@@ -24,13 +34,13 @@
     <string name="entry_kotlin_subtitle">Run the MLKit Showcase written in Kotlin.</string>
     <string name="mode_odt_live_home_title">재활용의 모든것</string>
     <string name="mode_odt_live_home_subtitle">자세한 재활용 활용법을 알아보아요.</string>
-    <string name="mode_odt_live_image_label_title">이미지 라벨 찾기</string>
+    <string name="mode_odt_live_image_label_title">인공지능 재활용 알아보기</string>
     <string name="mode_odt_live_image_label_subtitle">머신러닝으로 이미지 라벨을 검색을 해보세요.</string>
     <string name="mode_odt_live_image_title">비슷한 이미지 검색</string>
     <string name="mode_odt_live_image_subtitle">머신러닝으로 비슷한 사진을 검색을 해보세요.</string>
     <string name="mode_odt_live_text_title">글자 인식하기</string>
     <string name="mode_odt_live_text_subtitle">간단히 카드 유효기간을 확인해보세요.</string>
-    <string name="mode_odt_live_barcode_title">바코드 QR 코드 찾기</string>
+    <string name="mode_odt_live_barcode_title">바코드 QR 코드로 재활용 알아보기</string>
     <string name="mode_odt_live_barcode_subtitle">바코드 또는 QR를  찾아보세요.</string>
     <string name="mode_odt_live_landmark_title">유명장소 찾기</string>
     <string name="mode_odt_live_landmark_subtitle">유명지 사진이 맞는지 확인해보세요.</string>
@@ -109,11 +119,24 @@
 
     <!--  google -->
     <!--  web -->
-    <string name="url">http://34.67.19.15</string>
+    <string name="url">http://34.67.19.15/env_all/</string>
+    <string name="mypicurl">http://34.67.19.15/tag/my-pic/</string>
+    <string name="urlip">34.67.19.15</string>
+    <string name="emailid">bibiksh78@gmail.com</string>
+    <string name="emailpw">king073322</string>
     <string name="title_point">나의 포인트</string>
+    <string name="title_pointcount"> </string>
     <string name="point_value">100  점 </string>
     <string name="title_pointplus"> +100 포인트</string>
-    <string name="title_pointminus"> -100 포인트</string>
+    <string name="title_pointminus"> 0</string>
+    <string name="title_posttitle"> 나의 포스팅</string>
+    <string name="title_pointleveltitle"> 나의 레벨</string>
+
+    <string name="title_posting">나만의 재활용 분류 등록 </string>
+    <string name="title_postingdetail">정보가 없습니다. 당신이 이 물건의 맨 처음 등록자가 되어주세요.(1000 point 지급) </string>
+    <string name="title_OK">등록</string>
+    <string name="title_BACK">뒤로</string>
+    <string name="title_CANCEL">취소</string>
 
 
     <!--  Ghost -->
@@ -239,6 +262,13 @@
     <string name="published">Published</string>
     <string name="scheduled">Scheduled</string>
     <string name="next">Next</string>
+    <!-- reservation -->
+    <string name="maintitle">대형폐기물 예약</string>
+    <string name="title">대형폐기물 예약 어플리케이션</string>
+    <string name="reserve_date">예약 날짜:</string>
+    <string name="reserve_number_of_item">예약 갯수</string>
 
+    <string name="reservmaintitle">예약 리스트</string>
+    <string name="username">Current username: %s \n\n</string>
 
 </resources>

@@ -1,10 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: io.palaima.debugdrawer:debugdrawer-picasso:0.7.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7c49b37accae35b0bfdddf541afd9ffc/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7c49b37accae35b0bfdddf541afd9ffc/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dab99f907583f7554a6251a655a2f00d/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dab99f907583f7554a6251a655a2f00d/res" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.palaima.debugdrawer/debugdrawer-picasso/0.7.0/afd6fae4a5f1dab7d9dd8f95bb77af3b8782f941/debugdrawer-picasso-0.7.0-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.palaima.debugdrawer/debugdrawer-picasso/0.7.0/82870f10312de8870a3f4e9aa91f024e2e4e6505/debugdrawer-picasso-0.7.0-sources.jar!/" />
     </SOURCES>

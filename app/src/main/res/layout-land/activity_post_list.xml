@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.PostListActivity">
+    tools:context=".ghost.view.PostListActivity">
 
     <FrameLayout
         android:id="@+id/app_bar_bg"
@@ -26,14 +26,14 @@
             android:layoutDirection="locale"
             style="@style/MyToolbar"
             tools:targetApi="jelly_bean_mr1">
-
+            <!-- ic_launcher-->
             <ImageView
                 android:id="@+id/user_image"
                 android:layout_width="@dimen/toolbar_height"
                 android:layout_height="@dimen/toolbar_height"
                 android:contentDescription="@string/cdesc_user_image"
                 android:padding="@dimen/padding_default"
-                tools:src="@drawable/ic_launcher"
+                tools:src="@drawable/dallin_52"
                 />
 
             <TextView
@@ -48,7 +48,12 @@
                 android:text="@string/app_name"
                 tools:text="My Awesome Blog Title"
                 />
-
+            <!--  SearchView androidx.appcompat.widget.SearchView -->
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/simpleSearchView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right"/>
         </androidx.appcompat.widget.Toolbar>
 
         <FrameLayout
@@ -59,16 +64,16 @@
 
             <!-- CoordinatorLayout needed to ensure the FAB gets correct margins -->
             <!-- and to ensure the FAB never overlaps a Snackbar -->
-            <android.support.design.widget.CoordinatorLayout
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <android.support.v4.widget.SwipeRefreshLayout
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
                     android:id="@+id/swipe_refresh_layout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <android.support.v7.widget.RecyclerView
+                    <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/post_list"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -84,9 +89,9 @@
                         tools:listitem="@layout/post_list_item"
                         />
 
-                </android.support.v4.widget.SwipeRefreshLayout>
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-                <android.support.design.widget.FloatingActionButton
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/new_post_btn"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
@@ -95,7 +100,7 @@
                     style="@style/MyFloatingActionButton"
                     />
 
-            </android.support.design.widget.CoordinatorLayout>
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
         </FrameLayout>
 

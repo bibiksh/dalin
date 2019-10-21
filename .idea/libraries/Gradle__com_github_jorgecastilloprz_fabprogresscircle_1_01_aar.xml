@@ -1,10 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.jorgecastilloprz:fabprogresscircle:1.01@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c86288ce6d7640f5383a3f98c1a0b7a7/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c86288ce6d7640f5383a3f98c1a0b7a7/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f906e4b2767b9f22be764d912e543c01/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f906e4b2767b9f22be764d912e543c01/res" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.jorgecastilloprz/fabprogresscircle/1.01/6415e3516f6804b2bc269c6c68cf16d8caed6f0d/fabprogresscircle-1.01-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.jorgecastilloprz/fabprogresscircle/1.01/5175d548a4a384434731a254962e414953af7cc5/fabprogresscircle-1.01-sources.jar!/" />
     </SOURCES>

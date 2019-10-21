@@ -1,10 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: io.palaima.debugdrawer:debugdrawer-base:0.7.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/beef579820838422362c2d322e69bc39/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/beef579820838422362c2d322e69bc39/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c11c8b7d8ed9f93bc758b9beaa42f689/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c11c8b7d8ed9f93bc758b9beaa42f689/res" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.palaima.debugdrawer/debugdrawer-base/0.7.0/b0cfc87280720d80321e3574dda3419216844c0e/debugdrawer-base-0.7.0-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.palaima.debugdrawer/debugdrawer-base/0.7.0/2a43bf6c0f11b29db47ad5addc0bfdf9d01dee6e/debugdrawer-base-0.7.0-sources.jar!/" />
     </SOURCES>

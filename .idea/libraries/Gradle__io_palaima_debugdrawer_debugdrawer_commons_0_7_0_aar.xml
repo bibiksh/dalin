@@ -1,10 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: io.palaima.debugdrawer:debugdrawer-commons:0.7.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e45135e05768055fae8f83c1a1f1f56c/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e45135e05768055fae8f83c1a1f1f56c/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a9a7519bcd5bfa5016b0a1fea27b1a8f/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a9a7519bcd5bfa5016b0a1fea27b1a8f/res" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.palaima.debugdrawer/debugdrawer-commons/0.7.0/20315941929e3654e71a63fb2e99aca756ea8a8c/debugdrawer-commons-0.7.0-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.palaima.debugdrawer/debugdrawer-commons/0.7.0/a32bbb91f24142a67f792516eb5e4f8ee2be962/debugdrawer-commons-0.7.0-sources.jar!/" />
     </SOURCES>

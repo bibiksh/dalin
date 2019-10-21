@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <dimen name="home_page_title_size">18sp</dimen>
+  <dimen name="home_page_title_size_14">14sp</dimen>
   <dimen name="home_page_title_padding_top">32dp</dimen>
+  <dimen name="home_page_title_padding_top2">16dp</dimen>
   <dimen name="home_page_title_padding_bottom">16dp</dimen>
+  <dimen name="home_page_title_padding_top_0">0dp</dimen>
+  <dimen name="home_page_title_padding_top_10">10dp</dimen>
+  <dimen name="home_page_title_padding_bottom_0">0dp</dimen>
+  <dimen name="home_page_title_padding_bottom_10">10dp</dimen>
   <dimen name="home_page_point_padding_top">16dp</dimen>
   <dimen name="home_page_point_size">18sp</dimen>
   <dimen name="home_page_point_padding_bottom">16dp</dimen>
@@ -12,8 +18,11 @@
   <dimen name="home_page_mode_item_title_padding_bottom">8dp</dimen>
   <dimen name="home_page_mode_item_subtitle_size">14sp</dimen>
   <dimen name="home_page_mode_item_subtitle_padding_bottom">24dp</dimen>
+  <dimen name="home_page_mode_item_subtitle_padding_bottom_10">10dp</dimen>
+  <dimen name="home_page_mode_item_subtitle_padding_bottom_1">1dp</dimen>
   <dimen name="top_action_bar_padding_horizontal">8dp</dimen>
   <dimen name="top_action_bar_height">64dp</dimen>
+  <dimen name="top_action_bar_height2">36dp</dimen>
   <dimen name="top_action_button_padding">12dp</dimen>
   <dimen name="search_progress_bar_size">48dp</dimen>
   <dimen name="search_button_text_size">16sp</dimen>
@@ -126,5 +135,13 @@
   <dimen name="post_grid_max_width">1200dp</dimen>
 
   <dimen name="login_form_max_width">@dimen/responsive_breakpoint</dimen>
+  <!-- Default screen margins, per the Android Design guidelines. -->
+  <dimen name="activity_horizontal_margin">36dp</dimen>
+  <dimen name="activity_vertical_margin">36dp</dimen>
+  <!-- New add -->
+  <dimen name="post_title_body_size">24sp</dimen>
+  <dimen name="cardview_margin_8">8dp</dimen>
+  <dimen name="cardview_margin_4">4dp</dimen>
+
 
 </resources>

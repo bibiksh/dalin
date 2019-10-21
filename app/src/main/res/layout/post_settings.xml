@@ -70,7 +70,7 @@
         android:layout_marginLeft="@dimen/padding_large"
         android:layout_marginRight="@dimen/padding_large">
 
-        <com.seanlab.dalin.mlkit.ghost.view.widget.ChipsEditText
+        <com.photatos.dalin.mlkit.ghost.view.widget.ChipsEditText
             android:id="@+id/post_tags_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

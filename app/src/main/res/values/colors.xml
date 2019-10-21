@@ -46,6 +46,7 @@
     <color name="primary_dark">#101415</color>
     <color name="accent">@color/ghost_blue</color>
     <color name="background">@color/white2</color>
+    <color name="background2">#FAFAFA</color>
 
     <color name="text_primary">@color/dark_grey</color>
     <color name="text_secondary">@color/mid_grey</color>

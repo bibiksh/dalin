@@ -26,14 +26,14 @@
             android:layoutDirection="locale"
             style="@style/MyToolbar"
             tools:targetApi="jelly_bean_mr1">
-
+            <!-- ic_launcher-->
             <ImageView
                 android:id="@+id/user_image"
                 android:layout_width="@dimen/toolbar_height"
                 android:layout_height="@dimen/toolbar_height"
                 android:contentDescription="@string/cdesc_user_image"
                 android:padding="@dimen/padding_default"
-                tools:src="@drawable/ic_launcher"
+                tools:src="@drawable/dallin_52"
                 />
 
             <TextView
@@ -48,7 +48,12 @@
                 android:text="@string/app_name"
                 tools:text="My Awesome Blog Title"
                 />
-
+            <!-- SearchView  -->
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/simpleSearchView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right"/>
         </androidx.appcompat.widget.Toolbar>
 
         <FrameLayout
