@@ -18,3 +18,7 @@ A collection of real life apps built using [Firebase ML Kit](https://firebase.go
 * [Picking Image from camera/gallery](https://github.com/jkwiecien/EasyImage)
 
 Built with ❤️ by ksh ( refered from [@the-dagger](https://github.com/the-dagger))
+
+License
+* CameraKit is MIT License
+* 
